@@ -46,7 +46,7 @@ repositories {
     }
     maven {
         name 'tesla'
-        url 'https://maven.mcmoddev.com'
+        url 'https://maven.blamejared.com'
     }
     maven {
         name 'curseforge'
@@ -70,7 +70,7 @@ repositories {
     }
     maven {
         name 'ic2'
-        url 'https://maven.ic2.player.to'
+        url 'https://industrial-craft.net'
     }
     maven {
         name 'BlameJared - Crafttweaker'
@@ -121,7 +121,10 @@ dependencies {
     compileOnly "com.mod-buildcraft:buildcraft-api:${buildcraft_version}"
     compileOnly "team.chisel.ctm:CTM:MC${minecraft_version}-${ctm_version}:api"
     runtime "team.chisel.ctm:CTM:MC${minecraft_version}-${ctm_version}"
-    compileOnly "net.industrial-craft:industrialcraft-2:${ic2_version}:api"
+    //compileOnly "net.industrial-craft:industrialcraft-2:${ic2_version}:api"
+    // Use cursemaven to get IC2. 2746892 is the project ID (i.e. IC2),
+    // and 2746892 is the file we want - release 2.8.170
+    compileOnly "curse.maven:ic2-242638:2746892"
     compileOnly("CraftTweaker2:CraftTweaker2-API:${crafttweaker_version}") {
         exclude module: "asm-debug-all"
     }
